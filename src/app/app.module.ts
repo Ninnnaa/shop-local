@@ -12,13 +12,17 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
     DashboardLayoutComponent,
-    HomeComponent
+    HomeComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     FlexLayoutModule,
     MatButtonModule,
     HttpClientModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

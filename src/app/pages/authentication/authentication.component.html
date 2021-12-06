@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="relative">
+  <div fxLayout="column" fxLayoutAlign="center center" class="left">
+      <img src="assets/images/logo-login.png" class="logo">
+    <div class="form">
+      <form class="example-form" [formGroup]="form">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+
+  </div>
+  <div class="right">
+      <img src="assets/images/support-local-business.png">
+    <div class="shopping-bag">
+      <img src="assets/images/shopping-bag.png">
+    </div>
+    <div class="shopping-car">
+      <img src="assets/images/shopping-car.png">
+    </div>
+  </div>
+</div>

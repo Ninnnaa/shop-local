@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutComponent } from "./layouts/auth-layout/auth-layout.component";
 import { DashboardLayoutComponent } from "./layouts/dashboard-layout/dashboard-layout.component";
 import { HomeComponent } from './pages/home/home.component';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
 
 const routes: Routes = [
   {
@@ -12,10 +13,6 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
-      },
-      {
-        path: 'dashboard',
-        loadChildren: () => import('./dashboard/dashboard.module').then(module => module.DashboardModule)
       }
     ]
   },
@@ -24,13 +21,8 @@ const routes: Routes = [
     component: AuthLayoutComponent,
     children: [
       {
-        path: '',
-        redirectTo: '/auth',
-        pathMatch: 'full'
-      },
-      {
         path: 'auth',
-        loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule)
+        component: AuthenticationComponent,
       }
     ]
   }
@@ -40,4 +32,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
