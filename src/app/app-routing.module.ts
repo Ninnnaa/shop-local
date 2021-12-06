@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthLayoutComponent } from "./layouts/auth-layout/auth-layout.component";
 import { DashboardLayoutComponent } from "./layouts/dashboard-layout/dashboard-layout.component";
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
+        component: HomeComponent,
       },
       {
         path: 'dashboard',
