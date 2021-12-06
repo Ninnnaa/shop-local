@@ -1,0 +1,24 @@
+.container {
+  padding: 5%;
+}
+
+.header {
+  background: #fff;
+  height: 105px;
+  border-bottom: 1px solid #868686;
+}
+
+.logo {
+  margin-left: 5%;
+}
+
+.actions {
+  margin-right: 5%;
+  color: #7ABADD;
+  font-size: 150%;
+}
+ ::ng-deep {
+   .mat-button {
+     font-size: 30px;
+   }
+ }
