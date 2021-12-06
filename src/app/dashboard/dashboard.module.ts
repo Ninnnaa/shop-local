@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DashboardRoutingModule } from './dashboard-routing.module';
-
 
 @NgModule({
   declarations: [
@@ -12,4 +10,5 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     DashboardRoutingModule
   ]
 })
+
 export class DashboardModule { }
