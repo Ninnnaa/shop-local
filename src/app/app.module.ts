@@ -9,6 +9,9 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './pages/home/home.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,21 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
