@@ -15,6 +15,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuthLayoutComponent,
     DashboardLayoutComponent,
     HomeComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,

@@ -12,12 +12,17 @@
     },
     "error": {
       "required": "Completați acest cimp",
-      "email": "Introduceti e-mail"
+      "INVALID_EMAIL_ADDRESS": "Introduceti e-mail valid"
     }
   },
   "button": {
     "forgotPassword": "Ai uitat parola?",
     "login": "Intra in cont",
     "createAccount": "Creaza un cont"
+  },
+  "page": {
+    "auth": {
+      "loginTitle": "Autentificare"
+    }
   }
 }

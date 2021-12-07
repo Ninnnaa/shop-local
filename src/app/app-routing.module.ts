@@ -4,6 +4,7 @@ import { AuthLayoutComponent } from "./layouts/auth-layout/auth-layout.component
 import { DashboardLayoutComponent } from "./layouts/dashboard-layout/dashboard-layout.component";
 import { HomeComponent } from './pages/home/home.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'auth',
         component: AuthenticationComponent,
+      },
+      {
+        path: 'createAccount',
+        component: CreateAccountComponent,
       }
     ]
   }
