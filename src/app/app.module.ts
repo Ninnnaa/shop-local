@@ -17,6 +17,11 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
 import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CarouselItemComponent } from './components/carousel/carousel-item/carousel-item.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { EventsComponent } from './pages/events/events.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,10 @@ import { ForgotPasswordComponent } from './pages/authentication/forgot-password/
     HomeComponent,
     AuthenticationComponent,
     CreateAccountComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    CarouselComponent,
+    CarouselItemComponent,
+    EventsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +47,8 @@ import { ForgotPasswordComponent } from './pages/authentication/forgot-password/
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatCardModule,
+    MatIconModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,0 +1,17 @@
+<div class="carousel-item">
+  <ng-container *ngFor="let card of cards; let i = index">
+    <div @carouselAnimation *ngIf="i === currentCard" >
+      <div class="content">
+        <h4>{{card.title}}</h4>
+        <div>{{card.description}}</div>
+        <div>
+          <button mat-icon-button (click)="goToCardLink(card)" >{{ 'component.carousel.link' | translate }}</button>
+        </div>
+      </div>
+      <div class="image">
+        <img [src]="card.image"/>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

@@ -43,5 +43,10 @@
       "createAccountTitle": "Indeplineste formularul",
       "recoveryPassword": "Recupereaza parola"
     }
+  },
+  "component": {
+    "carousel": {
+      "link": "Mai multe detalii aici"
+    }
   }
 }

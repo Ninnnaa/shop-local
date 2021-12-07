@@ -1,0 +1,23 @@
+.carousel-item {
+  padding-top: 2%;
+}
+
+.content {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+}
+
+.link {
+  text-align: right;
+}
+
+.image {
+  position: absolute;
+  right: 80px;
+
+  img {
+    max-width: 250px;
+    max-height: 150px;
+  }
+}

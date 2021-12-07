@@ -1,0 +1,14 @@
+<mat-card class="carousel">
+  <app-carousel-item
+    [cards]="cards"
+    [currentCard]="currentCard">
+  </app-carousel-item>
+  <div  fxLayout="row" fxLayoutAlign="space-between" class="chevrons" >
+      <button mat-icon-button  (click)="moveToPreviousSlide()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button mat-icon-button (click)="moveToNextSlide()">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+  </div>
+</mat-card>

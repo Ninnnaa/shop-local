@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
 import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
+import { EventsComponent } from './pages/events/events.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'events',
+        component: EventsComponent,
       }
     ]
   },
