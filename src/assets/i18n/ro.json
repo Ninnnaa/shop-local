@@ -15,25 +15,33 @@
       "lastName": "Nume",
       "city": "Oras",
       "businessName": "Numele comercial",
-      "telephone": "Numar de conact",
+      "telephone": "Numar de contact",
       "email": "Email",
       "storeAddress": "Adresa",
       "password": "Parola"
     },
+    "forgotPassword": {
+      "new": "Parola noua",
+      "repeat": "Repeta parola"
+    },
     "error": {
       "required": "Completați acest cimp",
-      "INVALID_EMAIL_ADDRESS": "Introduceti e-mail valid"
+      "INVALID_EMAIL_ADDRESS": "Introduceti e-mail valid",
+      "minimLength": "Introduceti nimim 8 caractere"
     }
   },
   "button": {
     "forgotPassword": "Ai uitat parola?",
     "login": "Intra in cont",
-    "createAccount": "Creaza un cont"
+    "createAccount": "Creaza un cont",
+    "save": "Salveaza",
+    "back": "Inapoi"
   },
   "page": {
     "auth": {
       "loginTitle": "Autentificare",
-      "createAccountTitle": "Indeplineste formularul"
+      "createAccountTitle": "Indeplineste formularul",
+      "recoveryPassword": "Recupereaza parola"
     }
   }
 }

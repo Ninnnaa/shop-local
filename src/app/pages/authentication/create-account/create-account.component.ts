@@ -17,7 +17,7 @@ export class CreateAccountComponent implements OnInit {
       email: this.fb.control(null, {
         validators: [Validators.required, Validators.email],
       }),
-      firsName: this.fb.control(null, {
+      firstName: this.fb.control(null, {
         validators: [Validators.required],
       }),
       lastName: this.fb.control(null, {
@@ -36,7 +36,7 @@ export class CreateAccountComponent implements OnInit {
         validators: [Validators.required],
       }),
       password: this.fb.control(null, {
-        validators: [Validators.required],
+        validators: [Validators.required, Validators.minLength(8)],
       }),
     }, {updateOn: 'blur'});
   }
@@ -53,6 +53,10 @@ export class CreateAccountComponent implements OnInit {
     if (formControl.hasError('email')) {
       return FormErrorEnums.email
     }
+    if (formControl.hasError('minlength')) {
+      return FormErrorEnums.min
+    }
+
     return ''
   }
 }

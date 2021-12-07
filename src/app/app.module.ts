@@ -16,6 +16,7 @@ import { AuthenticationComponent } from './pages/authentication/authentication.c
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
+import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreateAccountComponent } from './pages/authentication/create-account/cr
     DashboardLayoutComponent,
     HomeComponent,
     AuthenticationComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

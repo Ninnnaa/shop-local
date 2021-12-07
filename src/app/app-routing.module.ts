@@ -5,6 +5,7 @@ import { DashboardLayoutComponent } from "./layouts/dashboard-layout/dashboard-l
 import { HomeComponent } from './pages/home/home.component';
 import { AuthenticationComponent } from './pages/authentication/authentication.component';
 import { CreateAccountComponent } from './pages/authentication/create-account/create-account.component';
+import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'createAccount',
         component: CreateAccountComponent,
+      },
+      {
+        path: 'forgotPassword',
+        component: ForgotPasswordComponent,
       }
     ]
   }

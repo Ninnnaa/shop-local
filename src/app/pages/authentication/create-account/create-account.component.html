@@ -12,7 +12,7 @@
           matInput
           formControlName="firstName"
         >
-        <mat-error>{{('forms.error.' + displayError('email')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('firstName')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -23,7 +23,7 @@
           matInput
           formControlName="lastName"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('lastName')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -34,7 +34,7 @@
           matInput
           formControlName="city"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('city')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -45,7 +45,7 @@
           matInput
           formControlName="businessName"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('businessName')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -56,7 +56,7 @@
           matInput
           formControlName="telephone"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('telephone')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -67,7 +67,7 @@
           matInput
           formControlName="storeAddress"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('storeAddress')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -78,7 +78,7 @@
           matInput
           formControlName="email"
         >
-        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('email')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -93,11 +93,7 @@
       </mat-form-field>
     </div>
   </form>
-  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin-top">
-    <button mat-button>{{'button.forgotPassword' | translate}}</button>
-    <button mat-raised-button [disabled]="form.invalid">{{'button.login' | translate}}</button>
-  </div>
   <div fxLayout="row" fxLayoutAlign="center center" class="margin-top">
-    <button mat-button routerLink="/createAccount">{{'button.createAccount' | translate}}</button>
+    <button mat-raised-button>{{'button.createAccount' | translate}}</button>
   </div>
 </div>
