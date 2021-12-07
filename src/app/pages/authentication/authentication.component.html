@@ -3,17 +3,37 @@
       <img src="assets/images/logo-login.png" class="logo">
     <div class="form">
       <form class="example-form" [formGroup]="form">
-        <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input
-            type="email"
-            matInput
-            formControlName="email"
-          >
-        </mat-form-field>
+        <div>
+          <mat-form-field>
+            <mat-label>{{'forms.login.email' | translate}}</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+            >
+            <mat-error>{{('forms.error.' + displayError('email')) | translate}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="margin-top">
+          <mat-form-field>
+            <mat-label>{{'forms.login.password' | translate}}</mat-label>
+            <input
+              type="password"
+              matInput
+              formControlName="password"
+            >
+            <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+          </mat-form-field>
+        </div>
       </form>
+      <div fxLayout="row" fxLayoutAlign="space-between center" class="margin-top">
+        <button mat-button>{{'button.forgotPassword' | translate}}</button>
+        <button mat-raised-button>{{'button.login' | translate}}</button>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center" class="margin-top">
+        <button mat-button>{{'button.createAccount' | translate}}</button>
+      </div>
     </div>
-
   </div>
   <div class="right">
       <img src="assets/images/support-local-business.png">

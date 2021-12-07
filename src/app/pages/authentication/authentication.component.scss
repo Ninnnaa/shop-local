@@ -42,3 +42,26 @@
 .form {
   padding: 10%;
 }
+
+::ng-deep{
+  .mat-form-field {
+    width: 500px !important;
+  }
+
+  .mat-form-field-infix {
+    background-color: #d7eaf5;
+  }
+
+  .mat-raised-button {
+    background-color: #7ABADD;
+    color: #fff;
+  }
+
+  .mat-button {
+    color: #7ABADD;
+  }
+}
+
+.margin-top {
+  margin-top: 5%;
+}

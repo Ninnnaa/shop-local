@@ -4,5 +4,20 @@
       "producers": "Producatori",
       "events": "Evenimente"
     }
+  },
+  "forms": {
+    "login": {
+      "email": "Email",
+      "password": "Parola"
+    },
+    "error": {
+      "required": "Completați acest cimp",
+      "email": "Introduceti e-mail"
+    }
+  },
+  "button": {
+    "forgotPassword": "Ai uitat parola?",
+    "login": "Intra in cont",
+    "createAccount": "Creaza un cont"
   }
 }

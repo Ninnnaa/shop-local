@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormErrorEnums } from '../../enums/auth/form-error.enums';
 
 @Component({
   selector: 'app-authentication',
@@ -22,5 +23,17 @@ export class AuthenticationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  displayError(formControlName: string): string {
+    const formControl = this.form.controls[formControlName];
+
+    if(formControl.hasError('required')) {
+      return FormErrorEnums.required
+    }
+    if(formControl.hasError('email')) {
+      return FormErrorEnums.email
+    }
+    return ''
   }
 }
