@@ -10,6 +10,16 @@
       "email": "Email",
       "password": "Parola"
     },
+    "createAccount": {
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "city": "Oras",
+      "businessName": "Numele comercial",
+      "telephone": "Numar de conact",
+      "email": "Email",
+      "storeAddress": "Adresa",
+      "password": "Parola"
+    },
     "error": {
       "required": "Completați acest cimp",
       "INVALID_EMAIL_ADDRESS": "Introduceti e-mail valid"
@@ -22,7 +32,8 @@
   },
   "page": {
     "auth": {
-      "loginTitle": "Autentificare"
+      "loginTitle": "Autentificare",
+      "createAccountTitle": "Indeplineste formularul"
     }
   }
 }

@@ -1,1 +1,103 @@
-<p>create-account works!</p>
+<div class="margin-top title">
+  <h1>{{'page.auth.createAccountTitle' | translate}}</h1>
+</div>
+
+<div class="form">
+  <form class="example-form" [formGroup]="form">
+    <div>
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.firstName' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="firstName"
+        >
+        <mat-error>{{('forms.error.' + displayError('email')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.lastName' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="lastName"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.city' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="city"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.businessName' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="businessName"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.telephone' | translate}}</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="telephone"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.storeAddress' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="storeAddress"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.createAccount.email' | translate}}</mat-label>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.login.password' | translate}}</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password"
+        >
+        <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="margin-top">
+    <button mat-button>{{'button.forgotPassword' | translate}}</button>
+    <button mat-raised-button [disabled]="form.invalid">{{'button.login' | translate}}</button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" class="margin-top">
+    <button mat-button routerLink="/createAccount">{{'button.createAccount' | translate}}</button>
+  </div>
+</div>
