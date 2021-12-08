@@ -1,1 +1,17 @@
-<p>events works!</p>
+<div>
+  <h1 class="title">{{'page.events.title' | translate}}</h1>
+</div>
+
+<div class="card-data">
+  <mat-card class="card" *ngFor="let card of cards">
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-content class="margin-top">
+      {{card.date}}
+    </mat-card-content>
+    <mat-card-footer class="margin-top">
+      <div fxLayout="row" fxLayoutAlign="end end">
+        <button mat-flat-button>{{'button.detail' | translate}}</button>
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</div>

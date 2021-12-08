@@ -22,6 +22,8 @@ import { CarouselItemComponent } from './components/carousel/carousel-item/carou
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { EventsComponent } from './pages/events/events.component';
+import { EventComponent } from './pages/events/event/event.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { EventsComponent } from './pages/events/events.component';
     CarouselComponent,
     CarouselItemComponent,
     EventsComponent,
+    EventComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { EventsComponent } from './pages/events/events.component';
     ReactiveFormsModule,
     MatCardModule,
     MatIconModule,
+    MatGridListModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

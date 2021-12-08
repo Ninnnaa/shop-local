@@ -1,8 +1,9 @@
 {
   "basic": {
     "header": {
-      "producers": "Producatori",
-      "events": "Evenimente"
+      "producers": "Branduri",
+      "events": "Evenimente",
+      "category": "Produse"
     }
   },
   "forms": {
@@ -35,13 +36,17 @@
     "login": "Intra in cont",
     "createAccount": "Creaza un cont",
     "save": "Salveaza",
-    "back": "Inapoi"
+    "back": "Inapoi",
+    "detail": "Detalii"
   },
   "page": {
     "auth": {
       "loginTitle": "Autentificare",
       "createAccountTitle": "Indeplineste formularul",
       "recoveryPassword": "Recupereaza parola"
+    },
+    "events": {
+      "title": "Lista celor mai apropiate evenimente"
     }
   },
   "component": {

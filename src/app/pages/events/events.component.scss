@@ -1,0 +1,36 @@
+.margin-top {
+  margin-top: 10%;
+  font-size: 20px;
+}
+
+.title {
+  margin-left: 30%;
+  color: #7ABADD;
+  font-size: 30px;
+  margin-bottom: 5%;
+}
+
+.card-data {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 26%;
+  height: 150px;
+  background-color: #97cbf1;
+  margin: 2%;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+::ng-deep {
+  .mat-flat-button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+  }
+}
