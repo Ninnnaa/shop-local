@@ -10,7 +10,7 @@ export class EventsComponent implements OnInit {
 
   cards: EventInterface[] = [
     {
-      title: 'Iarmarocul cadourilor de craciun',
+      title: 'Iarmarocul cadourilor de Craciun',
       date: 'In decembrie',
       city: 'Balti',
     },

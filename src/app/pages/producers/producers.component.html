@@ -1,0 +1,21 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h1 class="title">{{'Producatorii nostri' | translate}}</h1>
+  <mat-form-field appearance="outline">
+    <input type="text" matInput placeholder="Cauta producator">
+  </mat-form-field>
+</div>
+
+
+
+<div class="card-data">
+  <mat-card class="card" *ngFor="let card of cards">
+    <mat-card-content >
+      <h2>{{card.title}}</h2>
+    </mat-card-content>
+    <mat-card-footer class="margin-top">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <button mat-flat-button routerLink="/event">{{'Vezi produsele' | translate}}</button>
+      </div>
+    </mat-card-footer>
+  </mat-card>
+</div>

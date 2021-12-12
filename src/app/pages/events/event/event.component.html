@@ -1,1 +1,33 @@
-<p>event works!</p>
+<div>
+  <h1 class="title">{{'Iarmarocul cadourilor de Craciun' | translate}}</h1>
+</div>
+
+<mat-card>
+  <div  fxLayout="row" fxLayoutAlign=" startcenter">
+    <img src="assets/images/christmas event.png" class="logo" routerLink="/">
+    <div class="margin-left">
+      <div class="margin-top">
+        <span class="card-title">Data: </span>
+        <span>{{event.date}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Locația: </span>
+        <span>{{event.addres}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Ora: </span>
+        <span>{{event.time}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Lista de participanți: </span>
+        <span>{{event.list}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Detalii: </span>
+        <span>{{event.details}}</span>
+      </div>
+    </div>
+
+  </div>
+
+</mat-card>

@@ -24,6 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { EventsComponent } from './pages/events/events.component';
 import { EventComponent } from './pages/events/event/event.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ProducersComponent } from './pages/producers/producers.component';
+import { ProducerComponent } from './pages/producers/producer/producer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     CarouselItemComponent,
     EventsComponent,
     EventComponent,
+    ProducersComponent,
+    ProducerComponent,
   ],
   imports: [
     BrowserModule,
