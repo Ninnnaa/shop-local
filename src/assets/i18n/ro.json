@@ -1,9 +1,9 @@
 {
   "basic": {
     "header": {
-      "producers": "Branduri",
+      "producers": "Producatorii nostri",
       "events": "Evenimente",
-      "category": "Produse"
+      "login": "Logare"
     }
   },
   "forms": {
