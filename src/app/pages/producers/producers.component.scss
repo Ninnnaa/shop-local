@@ -1,38 +1,41 @@
-.margin-top {
-  margin-top: 10%;
-  font-size: 20px;
-}
-
-.title {
-  color: #7ABADD;
-  font-size: 30px;
-  margin-bottom: 5%;
-}
-
-.card-data {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 26%;
-  height: 100px;
-  background-color: #7ABADD;
-  margin: 2%;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-}
-
-::ng-deep {
-  .mat-flat-button {
-    background-color: transparent;
-    color: #fff;
-    font-size: 15px;
+:host {
+  .margin-top {
+    margin-top: 10%;
+    font-size: 20px;
   }
-  .mat-form-field {
-    width: 100% !important;
+
+  .title {
+    color: #7ABADD;
+    font-size: 30px;
+    margin-bottom: 5%;
+  }
+
+  .card-data {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 26%;
+    height: 100px;
+    background-color: #7ABADD;
+    margin: 2%;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  ::ng-deep {
+    .mat-flat-button {
+      background-color: transparent;
+      color: #fff;
+      font-size: 15px;
+    }
+    .mat-form-field {
+      width: 100% !important;
+    }
   }
 }
+

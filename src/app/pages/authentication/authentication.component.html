@@ -29,7 +29,7 @@
   </form>
   <div fxLayout="row" fxLayoutAlign="space-between center" class="margin-top">
     <button mat-button routerLink="/forgotPassword">{{'button.forgotPassword' | translate}}</button>
-    <button mat-raised-button [disabled]="form.invalid">{{'button.login' | translate}}</button>
+    <button mat-raised-button [disabled]="form.invalid" (click)="submit()">{{'button.login' | translate}}</button>
   </div>
   <div fxLayout="row" fxLayoutAlign="center center" class="margin-top">
     <button mat-button routerLink="/createAccount">{{'button.createAccount' | translate}}</button>

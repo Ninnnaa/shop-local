@@ -26,6 +26,7 @@ import { EventComponent } from './pages/events/event/event.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ProducersComponent } from './pages/producers/producers.component';
 import { ProducerComponent } from './pages/producers/producer/producer.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ProducerComponent } from './pages/producers/producer/producer.component
     MatCardModule,
     MatIconModule,
     MatGridListModule,
+    MatSnackBarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
