@@ -10,9 +10,9 @@
         <input
           type="text"
           matInput
-          formControlName="firstName"
+          formControlName="name"
         >
-        <mat-error>{{('forms.error.' + displayError('firstName')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('name')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -32,9 +32,9 @@
         <input
           type="text"
           matInput
-          formControlName="city"
+          formControlName="location"
         >
-        <mat-error>{{('forms.error.' + displayError('city')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('location')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -43,16 +43,16 @@
         <input
           type="text"
           matInput
-          formControlName="businessName"
+          formControlName="brand"
         >
-        <mat-error>{{('forms.error.' + displayError('businessName')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('brand')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
       <mat-form-field>
         <mat-label>{{'forms.createAccount.telephone' | translate}}</mat-label>
         <input
-          type="number"
+          type="text"
           matInput
           formControlName="telephone"
         >
@@ -65,9 +65,9 @@
         <input
           type="text"
           matInput
-          formControlName="storeAddress"
+          formControlName="address"
         >
-        <mat-error>{{('forms.error.' + displayError('storeAddress')) | translate}}</mat-error>
+        <mat-error>{{('forms.error.' + displayError('address')) | translate}}</mat-error>
       </mat-form-field>
     </div>
     <div class="margin-top">
@@ -92,8 +92,20 @@
         <mat-error>{{('forms.error.' + displayError('password')) | translate}}</mat-error>
       </mat-form-field>
     </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'forms.login.password' | translate}}</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password_confirmation"
+        >
+        <mat-error>{{('forms.error.' + displayError('password_confirmation')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
   </form>
+
   <div fxLayout="row" fxLayoutAlign="center center" class="margin-top">
-    <button mat-raised-button>{{'button.createAccount' | translate}}</button>
+    <button mat-raised-button (click)="submit()">{{'button.createAccount' | translate}}</button>
   </div>
 </div>

@@ -19,7 +19,8 @@
       "telephone": "Numar de contact",
       "email": "Email",
       "storeAddress": "Adresa",
-      "password": "Parola"
+      "password": "Parola",
+      "repeatPassword": "Repetati parola"
     },
     "forgotPassword": {
       "new": "Parola noua",

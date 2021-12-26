@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormErrorEnums } from '../../../enums/auth/form-error.enums';
+import { AuthServiceService } from '../../../services/auth-service.service';
+import { Router } from '@angular/router';
+import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create-account',
@@ -9,33 +12,41 @@ import { FormErrorEnums } from '../../../enums/auth/form-error.enums';
 })
 export class CreateAccountComponent implements OnInit {
   form: FormGroup;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(
     readonly fb: FormBuilder,
+    private readonly authService: AuthServiceService,
+    private readonly router: Router,
+    private _snackBar: MatSnackBar
   ) {
     this.form = this.fb.group({
       email: this.fb.control(null, {
         validators: [Validators.required, Validators.email],
       }),
-      firstName: this.fb.control(null, {
+      name: this.fb.control(null, {
         validators: [Validators.required],
       }),
       lastName: this.fb.control(null, {
         validators: [Validators.required],
       }),
-      city: this.fb.control(null, {
+      location: this.fb.control(null, {
         validators: [Validators.required],
       }),
-      businessName: this.fb.control(null, {
+      brand: this.fb.control(null, {
         validators: [Validators.required],
       }),
       telephone: this.fb.control(null, {
         validators: [Validators.required],
       }),
-      storeAddress: this.fb.control(null, {
+      address: this.fb.control(null, {
         validators: [Validators.required],
       }),
       password: this.fb.control(null, {
+        validators: [Validators.required, Validators.minLength(8)],
+      }),
+      password_confirmation: this.fb.control(null, {
         validators: [Validators.required, Validators.minLength(8)],
       }),
     }, {updateOn: 'blur'});
@@ -58,5 +69,21 @@ export class CreateAccountComponent implements OnInit {
     }
 
     return ''
+  }
+  submit(): void {
+    this.authService.create(this.form.value).subscribe( user => {
+      this.openSnackBar('Profil inregistrat');
+        this.router.navigateByUrl('/auth');
+
+      },
+      error => {
+        this.openSnackBar('Date incorecte');
+      })
+  }
+  openSnackBar(message: string) {
+    this._snackBar.open(message, 'Inchide', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
   }
 }

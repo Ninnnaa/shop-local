@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthServiceService {
   static readonly apiUrl = {
-    login: 'login'
+    login: 'login',
+    create: 'register',
   }
   constructor(
     private readonly httpClient: HttpClient
@@ -17,5 +18,9 @@ export class AuthServiceService {
 
   login(data: UserInterface): Observable<AuthInterface> {
     return this.httpClient.post<AuthInterface>(environment.url+ AuthServiceService.apiUrl.login, data);
+  }
+
+  create(data: UserInterface): Observable<UserInterface> {
+    return this.httpClient.post<UserInterface>(environment.url+ AuthServiceService.apiUrl.create, data);
   }
 }
