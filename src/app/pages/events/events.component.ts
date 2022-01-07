@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventInterface } from '../../interfaces/event.interface';
+import { EventService } from '../../services/event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -8,44 +10,20 @@ import { EventInterface } from '../../interfaces/event.interface';
 })
 export class EventsComponent implements OnInit {
 
-  cards: EventInterface[] = [
-    {
-      title: 'Iarmarocul cadourilor de Craciun',
-      date: 'In decembrie',
-      city: 'Balti',
-    },
-    {
-      title: 'Iarmarocul produselor de sezon',
-      date: 'In decembrie',
-      city: 'Chisinau',
+  cards: EventInterface[] = [] as EventInterface[];
 
-    },
-    {
-      title: 'Iarmarocul produselor handMade',
-      date: 'In februarie',
-      city: 'Edinet',
-
-    },
-    {
-      title: 'Iarmaroc de iarna',
-      date: 'In februarie',
-      city: 'Chisinau',
-    },
-    {
-      title: 'Iarmaroc de primavara',
-      date: 'In martie',
-      city: 'Chisinau',
-    },
-    {
-      title: 'Iarmaroc de iarna',
-      date: 'In Decembrie',
-      city: 'Chisinau',
-    }
-  ];
-
-  constructor() { }
+  constructor(
+    private readonly eventService: EventService,
+    private readonly router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.eventService.getEvents().subscribe(events => {
+      this.cards = events;
+    })
   }
 
+  getEvent(id:number) {
+    this.router.navigateByUrl(`/event/${id}`);
+  }
 }

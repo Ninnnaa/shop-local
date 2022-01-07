@@ -1,5 +1,9 @@
 export interface EventInterface {
-  title: string;
-  date: string;
-  city: string;
+  id: number;
+  name: string;
+  date: Date;
+  time: string;
+  location: string;
+  description: string;
+  participants: string;
 }
