@@ -33,7 +33,7 @@ const routes: Routes = [
         component: ProducersComponent,
       },
       {
-        path: 'producer',
+        path: 'producer/:id',
         component: ProducerComponent,
       },
     ]

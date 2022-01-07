@@ -4,6 +4,7 @@ import { FormErrorEnums } from '../../../enums/auth/form-error.enums';
 import { AuthServiceService } from '../../../services/auth-service.service';
 import { Router } from '@angular/router';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { citiesConstant } from '../../../constants/cities.constant';
 
 @Component({
   selector: 'app-create-account',
@@ -14,6 +15,7 @@ export class CreateAccountComponent implements OnInit {
   form: FormGroup;
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
+  cities = citiesConstant;
 
   constructor(
     readonly fb: FormBuilder,
@@ -71,6 +73,7 @@ export class CreateAccountComponent implements OnInit {
     return ''
   }
   submit(): void {
+    console.log(this.form.value)
     this.authService.create(this.form.value).subscribe( user => {
       this.openSnackBar('Profil inregistrat');
         this.router.navigateByUrl('/auth');

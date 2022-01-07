@@ -29,13 +29,15 @@
     <div class="margin-top">
       <mat-form-field>
         <mat-label>{{'forms.createAccount.city' | translate}}</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="location"
-        >
+        <mat-select formControlName="location">
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let city of cities" [value]="city.name">
+            {{city.name}}
+          </mat-option>
+        </mat-select>
         <mat-error>{{('forms.error.' + displayError('location')) | translate}}</mat-error>
       </mat-form-field>
+
     </div>
     <div class="margin-top">
       <mat-form-field>

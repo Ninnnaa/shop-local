@@ -28,6 +28,8 @@ import { ProducersComponent } from './pages/producers/producers.component';
 import { ProducerComponent } from './pages/producers/producer/producer.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     MatGridListModule,
     MatSnackBarModule,
     Ng2SearchPipeModule,
+    MatSelectModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
