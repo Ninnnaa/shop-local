@@ -1,23 +1,26 @@
-.title {
-  margin-left: 30%;
-  color: #7ABADD;
-  font-size: 30px;
-  margin-bottom: 5%;
-}
-.logo {
-  width: 300px;
-}
+:host {
+  .title {
+    margin-left: 30%;
+    color: #7ABADD;
+    font-size: 30px;
+    margin-bottom: 5%;
+  }
+  .logo {
+    width: 300px;
+  }
 
-.margin-left {
-  margin: 5%;
-}
+  .margin-left {
+    margin: 5%;
+  }
 
-.margin-top {
-  margin-top: 10px;
-  font-size: large;
-}
+  .margin-top {
+    margin-top: 10px;
+    font-size: large;
+  }
 
-.card-title {
-  color: #07364f;
-  font-weight: bold;
+  .card-title {
+    color: #07364f;
+    font-weight: bold;
+  }
+
 }

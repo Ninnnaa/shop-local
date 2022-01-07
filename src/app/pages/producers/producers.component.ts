@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthServiceService } from '../../services/auth-service.service';
+import { UserInterface } from '../../interfaces/auth.interface';
 
 @Component({
   selector: 'app-producers',
@@ -7,27 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProducersComponent implements OnInit {
 
-  cards = [
-    {
-      title: 'Home Made Candy'
-    },
-    {
-      title: 'ChocoCap'
-    },
-    {
-      title: 'roseLile'
-    },
-    {
-      title: 'Vego'
-    },
-    {
-      title: 'Home Made Vegan Sweets'
-    }
-  ]
+  cards: UserInterface[] = [];
+  searchText= '';
 
-  constructor() { }
+  constructor(
+    private readonly authServiceService : AuthServiceService,
+  ) { }
 
   ngOnInit(): void {
+    this.authServiceService.getUsers().subscribe( user => {
+      user.shift()
+      user.shift()
+      this.cards = user
+    });
   }
 
 }

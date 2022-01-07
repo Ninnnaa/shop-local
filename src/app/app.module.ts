@@ -27,6 +27,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ProducersComponent } from './pages/producers/producers.component';
 import { ProducerComponent } from './pages/producers/producer/producer.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     MatGridListModule,
     MatSnackBarModule,
+    Ng2SearchPipeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

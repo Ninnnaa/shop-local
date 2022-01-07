@@ -11,6 +11,7 @@ export class AuthServiceService {
   static readonly apiUrl = {
     login: 'login',
     create: 'register',
+    users: 'users'
   }
   constructor(
     private readonly httpClient: HttpClient
@@ -22,5 +23,9 @@ export class AuthServiceService {
 
   create(data: UserInterface): Observable<UserInterface> {
     return this.httpClient.post<UserInterface>(environment.url+ AuthServiceService.apiUrl.create, data);
+  }
+
+  getUsers(): Observable<UserInterface[]> {
+    return this.httpClient.get<UserInterface[]>(environment.url + AuthServiceService.apiUrl.users);
   }
 }
