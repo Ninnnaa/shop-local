@@ -1,8 +1,49 @@
 :host {
-
   .title {
     color: #7ABADD;
     font-size: 30px;
     margin-bottom: 5%;
+  }
+
+  img {
+    height: 300px;
+    width: 400px;
+    position: relative;
+  }
+
+  .brand {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    font-size:50px;
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #7ABADD;
+  }
+
+  .card {
+    background-color: white;
+  }
+
+  .margin-left {
+    margin: 5%;
+  }
+
+  .margin-top {
+    margin-top: 10px;
+    font-size: large;
+  }
+
+  .card-title {
+    color: #07364f;
+    font-weight: bold;
+  }
+
+  .mat-raised-button {
+    background-color: #7ABADD;
+    color: #fff;
   }
 }

@@ -1,6 +1,36 @@
 <div fxLayout="column" fxLayoutAlign="center center">
   <h1 class="title">{{'Detaliile producatorului' | translate}}</h1>
 </div>
-<mat-card>
-  <p>{{userData.brand}}</p>
+<mat-card class="card"  fxLayout="row">
+  <div>
+    <img src="assets/images/user-background.png">
+    <h2 class="brand">{{userData.brand}}</h2>
+  </div>
+    <div class="margin-left">
+      <div class="margin-top">
+        <span class="card-title">Numele producatorului: </span>
+        <span>{{userData.lastName}} {{userData.name}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Orasul: </span>
+        <span>{{userData.location}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Adresa: </span>
+        <span>{{userData.address}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Numar de contact: </span>
+        <span>{{userData.telephone}}</span>
+      </div>
+      <div class="margin-top">
+        <span class="card-title">Email: </span>
+        <span>{{userData.email}}</span>
+      </div>
+      <div class="margin-top">
+        <button mat-raised-button>Vezi Produsele</button>
+      </div>
+
+    </div>
+
 </mat-card>
