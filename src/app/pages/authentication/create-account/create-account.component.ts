@@ -73,7 +73,6 @@ export class CreateAccountComponent implements OnInit {
     return ''
   }
   submit(): void {
-    console.log(this.form.value)
     this.authService.create(this.form.value).subscribe( user => {
       this.openSnackBar('Profil inregistrat');
         this.router.navigateByUrl('/auth');

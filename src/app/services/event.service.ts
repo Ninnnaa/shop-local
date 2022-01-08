@@ -27,6 +27,10 @@ export class EventService {
   }
 
   createEventBy(data: EventService): Observable<EventInterface> {
-    return this.httpClient.post<EventInterface>(environment.url+ EventService.apiUrl.event, data);
+    return this.httpClient.post<EventInterface>(environment.url+ EventService.apiUrl.events, data);
+  }
+
+  deleteEvent(id: number): Observable<EventInterface> {
+    return this.httpClient.delete<EventInterface>(environment.url+ EventService.apiUrl.event(id));
   }
 }

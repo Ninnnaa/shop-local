@@ -1,33 +1,35 @@
-::ng-deep {
-  .mat-form-field {
-    width: 500px !important;
+:host {
+  ::ng-deep {
+    .mat-form-field {
+      width: 500px !important;
+    }
+
+    .mat-form-field-infix {
+      background-color: #d7eaf5;
+    }
+
+    .mat-raised-button {
+      background-color: #7ABADD;
+      color: #fff;
+    }
+
+    .mat-button {
+      color: #7ABADD;
+    }
   }
 
-  .mat-form-field-infix {
-    background-color: #d7eaf5;
+  .form {
+    padding-top: 5%;
   }
 
-  .mat-raised-button {
-    background-color: #7ABADD;
-    color: #fff;
+  .margin-top {
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
-  .mat-button {
+  .title {
+    margin-left: 30%;
     color: #7ABADD;
+    align-items: center;
   }
-}
-
-.form {
-  padding-top: 5%;
-}
-
-.margin-top {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.title {
-  margin-left: 30%;
-  color: #7ABADD;
-  align-items: center;
 }

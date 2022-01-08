@@ -34,6 +34,8 @@ import { AdministratorComponent } from './pages/administrator/administrator.comp
 import { ProducerPageComponent } from './pages/producer-page/producer-page.component';
 import { MatTableModule } from '@angular/material/table';
 import { CreateEventComponent } from './pages/events/create-event/create-event.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,8 @@ import { CreateEventComponent } from './pages/events/create-event/create-event.c
     MatSelectModule,
     MatMenuModule,
     MatTableModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
