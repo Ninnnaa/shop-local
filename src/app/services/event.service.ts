@@ -25,4 +25,8 @@ export class EventService {
   getEventById(id: number): Observable<EventInterface> {
     return this.httpClient.get<EventInterface>(environment.url+ EventService.apiUrl.event(id));
   }
+
+  createEventBy(data: EventService): Observable<EventInterface> {
+    return this.httpClient.post<EventInterface>(environment.url+ EventService.apiUrl.event, data);
+  }
 }

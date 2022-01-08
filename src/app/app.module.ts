@@ -32,6 +32,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AdministratorComponent } from './pages/administrator/administrator.component';
 import { ProducerPageComponent } from './pages/producer-page/producer-page.component';
+import { MatTableModule } from '@angular/material/table';
+import { CreateEventComponent } from './pages/events/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ProducerPageComponent } from './pages/producer-page/producer-page.compo
     ProducerComponent,
     AdministratorComponent,
     ProducerPageComponent,
+    CreateEventComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ import { ProducerPageComponent } from './pages/producer-page/producer-page.compo
     Ng2SearchPipeModule,
     MatSelectModule,
     MatMenuModule,
+    MatTableModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
