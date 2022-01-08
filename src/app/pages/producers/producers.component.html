@@ -1,7 +1,18 @@
 <div fxLayout="column" fxLayoutAlign="center center">
   <h1 class="title">{{'Producatorii nostri' | translate}}</h1>
-  <mat-form-field appearance="outline">
-    <input type="text" matInput placeholder="Cauta producator" [(ngModel)]="searchText">
+</div>
+
+<div div fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field appearance="outline" fxFlex="70">
+    <input type="text" matInput placeholder="Cauta eveniment" [(ngModel)]="searchText">
+  </mat-form-field>
+  <mat-form-field appearance="outline" fxFlex="25">
+    <mat-select [(ngModel)]="searchText" placeholder="Filtreaza dupa oras">
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let city of cities" [value]="city.name">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 </div>
 

@@ -36,6 +36,7 @@ import { MatTableModule } from '@angular/material/table';
 import { CreateEventComponent } from './pages/events/create-event/create-event.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     AdministratorComponent,
     ProducerPageComponent,
     CreateEventComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -77,6 +77,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatMenuModule,
     MatTableModule,
     MatNativeDateModule,
+    MatAutocompleteModule,
     MatDatepickerModule,
     TranslateModule.forRoot({
       loader: {

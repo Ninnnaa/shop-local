@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { citiesConstant } from '../../../constants/cities.constant';
-import { AuthServiceService } from '../../../services/auth-service.service';
 import { Router } from '@angular/router';
 import { FormErrorEnums } from '../../../enums/auth/form-error.enums';
 import { EventService } from '../../../services/event.service';
@@ -65,7 +64,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   date(event: MatDatepickerInputEvent<Date>): void {
-    this.form.controls['date'].setValue(dayjs(event.value).format('YYYY/DD/MM'));
+    this.form.controls['date'].setValue(dayjs(event.value).format('YYYY/MM/DD'));
   }
 
   submit(): void {

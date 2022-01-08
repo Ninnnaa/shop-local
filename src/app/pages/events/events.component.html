@@ -1,9 +1,23 @@
 <div>
   <h1 class="title">{{'page.events.title' | translate}}</h1>
 </div>
+<div div fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field appearance="outline" fxFlex="70">
+    <input type="text" matInput placeholder="Cauta eveniment" [(ngModel)]="searchText">
+  </mat-form-field>
+  <mat-form-field appearance="outline" fxFlex="25">
+    <mat-select [(ngModel)]="searchText" placeholder="Filtreaza dupa oras">
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let city of cities" [value]="city.name">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
 
 <div class="card-data">
-  <mat-card class="card" *ngFor="let card of cards">
+  <mat-card class="card" *ngFor="let card of cards | filter:searchText">
     <mat-card-title>
       <h2>{{card.name}}</h2>
     </mat-card-title>
