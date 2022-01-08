@@ -30,6 +30,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { AdministratorComponent } from './pages/administrator/administrator.component';
+import { ProducerPageComponent } from './pages/producer-page/producer-page.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { MatMenuModule } from '@angular/material/menu';
     EventComponent,
     ProducersComponent,
     ProducerComponent,
+    AdministratorComponent,
+    ProducerPageComponent,
   ],
   imports: [
     BrowserModule,

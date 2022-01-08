@@ -11,6 +11,7 @@ export class EventService {
 
   static readonly apiUrl = {
     events: 'events',
+    event: (id: number) => `events/${id}`,
   }
 
   constructor(
@@ -19,5 +20,9 @@ export class EventService {
 
   getEvents(): Observable<EventInterface[]> {
     return this.httpClient.get<EventInterface[]>(environment.url+ EventService.apiUrl.events);
+  }
+
+  getEventById(id: number): Observable<EventInterface> {
+    return this.httpClient.get<EventInterface>(environment.url+ EventService.apiUrl.event(id));
   }
 }

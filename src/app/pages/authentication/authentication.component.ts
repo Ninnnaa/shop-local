@@ -54,7 +54,7 @@ export class AuthenticationComponent implements OnInit {
     } as UserInterface;
 
     this.authService.login(data).subscribe( user => {
-      user.user.id === 1 ? this.router.navigateByUrl('/') : this.router.navigateByUrl('/events');
+      user.user.id === 1 ? this.router.navigateByUrl('/administrator') : this.router.navigateByUrl('functions');
 
     },
       error => {

@@ -1,10 +1,14 @@
-<div>
-  <h1 class="title">{{'Iarmarocul cadourilor de Craciun' | translate}}</h1>
+<div fxLayout="row" fxLayoutAlign="center center" >
+  <h1 class="title">{{'Detaliile Evenimentului' | translate}}</h1>
 </div>
 
 <mat-card class="card">
   <div  fxLayout="row" fxLayoutAlign=" startcenter">
-    <img src="assets/images/christmas event.png" class="logo" routerLink="/">
+    <div>
+      <img src="assets/images/event-border.jpeg" class="logo" routerLink="/">
+      <h2 class="brand">{{event.name}}</h2>
+    </div>
+
     <div class="margin-left">
       <div class="margin-top">
         <span class="card-title">Data: </span>
@@ -12,7 +16,7 @@
       </div>
       <div class="margin-top">
         <span class="card-title">Locația: </span>
-        <span>{{event.addres}}</span>
+        <span>{{event.location}}</span>
       </div>
       <div class="margin-top">
         <span class="card-title">Ora: </span>
@@ -20,11 +24,11 @@
       </div>
       <div class="margin-top">
         <span class="card-title">Lista de participanți: </span>
-        <span>{{event.list}}</span>
+        <span>{{event.participants}}</span>
       </div>
       <div class="margin-top">
         <span class="card-title">Detalii: </span>
-        <span>{{event.details}}</span>
+        <span>{{event.description}}</span>
       </div>
     </div>
 

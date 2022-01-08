@@ -1,12 +1,11 @@
 :host {
   .title {
-    margin-left: 30%;
     color: #7ABADD;
     font-size: 30px;
     margin-bottom: 5%;
   }
   .logo {
-    width: 300px;
+    width: 400px;
   }
 
   .margin-left {
@@ -25,6 +24,18 @@
 
   .card {
     background-color: white;
+  }
+
+  .brand {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #7ABADD;
   }
 
 }
