@@ -21,7 +21,6 @@ export class ProducersComponent implements OnInit {
   ngOnInit(): void {
     this.authServiceService.getUsers().subscribe( user => {
       user.shift()
-      user.shift()
       this.cards = user
     });
   }

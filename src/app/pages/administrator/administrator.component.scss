@@ -1,19 +1,25 @@
+:host {
+  ::ng-deep {
+    .mat-raised-button {
+      background-color: #7ABADD;
+      color: #fff;
+    }
 
-::ng-deep {
-  .mat-raised-button {
-    background-color: #7ABADD;
-    color: #fff;
+    .mat-form-field-flex {
+      background-color: #7ABADD;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .margin-top {
+      margin-top: 5%;
+    }
+
+    .title {
+      color: #7ABADD;
+    }
   }
 
-  .mat-form-field-flex {
-    background-color: #7ABADD;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  .margin-top {
-    margin-top: 5%;
-  }
 }

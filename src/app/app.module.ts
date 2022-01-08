@@ -55,6 +55,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     AdministratorComponent,
     ProducerPageComponent,
     CreateEventComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,12 @@ export class AuthServiceService {
   getUsers(): Observable<UserInterface[]> {
     return this.httpClient.get<UserInterface[]>(environment.url + AuthServiceService.apiUrl.users);
   }
+
   getUser(id: number): Observable<UserInterface> {
     return this.httpClient.get<UserInterface>(environment.url + AuthServiceService.apiUrl.user(id));
+  }
+
+  deleteUser(id: number): Observable<UserInterface> {
+    return this.httpClient.delete<UserInterface>(environment.url + AuthServiceService.apiUrl.user(id));
   }
 }

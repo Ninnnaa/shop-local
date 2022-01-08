@@ -1,25 +1,28 @@
-.container {
-  padding: 5%;
-}
+:host {
+  .container {
+    padding: 5%;
+  }
 
-.header {
-  background: #fff;
-  height: 105px;
-  border-bottom: 1px solid #868686;
-}
+  .header {
+    background: #fff;
+    height: 105px;
+    border-bottom: 1px solid #868686;
+  }
 
-.logo {
-  margin-left: 5%;
-}
+  .logo {
+    margin-left: 5%;
+  }
 
-.actions {
-  margin-right: 5%;
-  color: #7ABADD;
-}
+  .actions {
+    margin-right: 5%;
+    color: #7ABADD;
+  }
 
- ::ng-deep {
-   .mat-button {
-     padding: 0 40px !important;
-     font-size: 25px;
-   }
- }
+  ::ng-deep {
+    .mat-button {
+      padding: 0 40px !important;
+      font-size: 25px;
+    }
+  }
+
+}
