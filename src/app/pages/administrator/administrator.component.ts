@@ -4,6 +4,7 @@ import { EventService } from '../../services/event.service';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { UserInterface } from '../../interfaces/auth.interface';
 import { AuthServiceService } from '../../services/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-administrator',
@@ -22,6 +23,7 @@ export class AdministratorComponent implements OnInit {
     private readonly eventService: EventService,
     private _snackBar: MatSnackBar,
     private readonly authService: AuthServiceService,
+    private readonly router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -50,7 +52,8 @@ export class AdministratorComponent implements OnInit {
     });
   }
 
-  editEvent(): void {
+  editEvent(id: number): void {
+    this.router.navigateByUrl(`/addEvent/${id}`);
   }
 
   usersData(): void {

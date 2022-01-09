@@ -37,6 +37,8 @@ import { CreateEventComponent } from './pages/events/create-event/create-event.c
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ProductsComponent } from './pages/products/products.component';
+import { CreateProductComponent } from './pages/products/create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     AdministratorComponent,
     ProducerPageComponent,
     CreateEventComponent,
+    ProductsComponent,
+    CreateProductComponent,
   ],
   imports: [
     BrowserModule,

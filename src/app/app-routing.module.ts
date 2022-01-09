@@ -13,6 +13,7 @@ import { ProducerComponent } from './pages/producers/producer/producer.component
 import { AdministratorComponent } from './pages/administrator/administrator.component';
 import { ProducerPageComponent } from './pages/producer-page/producer-page.component';
 import { CreateEventComponent } from './pages/events/create-event/create-event.component';
+import { CreateProductComponent } from './pages/products/create-product/create-product.component';
 
 const routes: Routes = [
   {
@@ -44,12 +45,16 @@ const routes: Routes = [
         component: AdministratorComponent,
       },
       {
-        path: 'addEvent',
+        path: 'addEvent/:id',
         component: CreateEventComponent,
       },
       {
         path: 'functions',
         component: ProducerPageComponent,
+      },
+      {
+        path: 'newProduct/:id',
+        component: CreateProductComponent,
       },
     ]
   },
