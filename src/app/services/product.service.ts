@@ -23,4 +23,20 @@ export class ProductService {
     return this.httpClient.get<ProductInterface[]>(environment.url+ ProductService.apiUrl.products);
   }
 
+  createProduct(data: ProductInterface): Observable<ProductInterface> {
+    return this.httpClient.post<ProductInterface>(environment.url+ ProductService.apiUrl.products, data);
+  }
+
+  updateProduct(id: number, data: ProductInterface): Observable<ProductInterface> {
+    return this.httpClient.put<ProductInterface>(environment.url+ ProductService.apiUrl.product(id), data);
+  }
+
+  deleteProduct(id: number): Observable<ProductInterface> {
+    return this.httpClient.delete<ProductInterface>(environment.url+ ProductService.apiUrl.product(id));
+  }
+
+  getProductById(id: number): Observable<ProductInterface> {
+    return this.httpClient.get<ProductInterface>(environment.url+ ProductService.apiUrl.product(id));
+  }
+
 }

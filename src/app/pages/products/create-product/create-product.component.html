@@ -1,1 +1,62 @@
-<p>create-product works!</p>
+<div fxLayout="row" fxLayoutAlign="start center">
+  <button mat-button routerLink="/functions">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    Inapoi
+  </button>
+</div>
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <div class="title">
+    <h1>{{'Adauga produs nou' | translate}}</h1>
+  </div>
+  <form [formGroup]="form">
+    <div>
+      <mat-form-field>
+        <mat-label>{{'Nume produs' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="name"
+        >
+        <mat-error>{{('forms.error.' + displayError('name')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'Categorie' | translate}}</mat-label>
+        <mat-select formControlName="category">
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let category of categories" [value]="category.name">
+            {{category.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error>{{('forms.error.' + displayError('category')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'Descriere' | translate}}</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="description"
+        >
+        <mat-error>{{('forms.error.' + displayError('description')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="margin-top">
+      <mat-form-field>
+        <mat-label>{{'Oras' | translate}}</mat-label>
+        <mat-select formControlName="location">
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let city of cities" [value]="city.name">
+            {{city.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error>{{('forms.error.' + displayError('location')) | translate}}</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <button mat-raised-button (click)="submit()">{{'Adauga eveniment' | translate}}</button>
+</div>
+

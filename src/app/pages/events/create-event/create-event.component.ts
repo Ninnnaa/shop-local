@@ -88,7 +88,7 @@ if(this.eventId !== 0) {
   }
 
   submit(): void {
-    if(this.eventId === 0 ) {
+    if(this.eventId == 0 ) {
       this.eventService.createEventBy(this.form.value).subscribe( user => {
           this.openSnackBar('Evenimentul a fost adaugat');
           this.router.navigateByUrl('/administrator');

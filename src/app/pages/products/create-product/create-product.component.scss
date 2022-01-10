@@ -1,0 +1,38 @@
+:host {
+  ::ng-deep {
+    .mat-form-field {
+      width: 500px !important;
+    }
+    ::ng-deep {
+      .mat-button {
+        padding: 5px 20px !important;
+        font-size: 15px;
+      }
+    }
+
+    .mat-form-field-infix {
+      background-color: #d7eaf5;
+    }
+    .mat-form-field-flex {
+      background-color: #d7eaf5;
+    }
+
+    .mat-raised-button {
+      background-color: #7ABADD;
+      color: #fff;
+    }
+  }
+
+  .form {
+    padding-top: 5%;
+  }
+
+  .margin-top {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .title {
+    color: #7ABADD;
+  }
+}
