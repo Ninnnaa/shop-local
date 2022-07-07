@@ -21,6 +21,7 @@ export class CreateEventComponent implements OnInit {
   cities = citiesConstant;
   eventId = 0;
   eventData: EventInterface = {} as EventInterface;
+  image: File | undefined;
 
   constructor(
     readonly fb: FormBuilder,
@@ -63,6 +64,9 @@ if(this.eventId !== 0) {
       }),
       participants: this.fb.control(null, {
         validators: [Validators.required],
+      }),
+      event_image: this.fb.control(null, {
+        validators: [Validators.required],
       })
     }, {updateOn: 'blur'});
   }
@@ -88,8 +92,9 @@ if(this.eventId !== 0) {
   }
 
   submit(): void {
+
     if(this.eventId == 0 ) {
-      this.eventService.createEventBy(this.form.value).subscribe( user => {
+      this.eventService.createEventBy(this.form.value, this.image).subscribe( user => {
           this.openSnackBar('Evenimentul a fost adaugat');
           this.router.navigateByUrl('/administrator');
 
@@ -107,6 +112,10 @@ if(this.eventId !== 0) {
           this.openSnackBar('Date incorecte');
         })
     }
+  }
+
+  onfileSelected(event: any) {
+    this.image = event.target.files[0];
   }
 
   openSnackBar(message: string) {

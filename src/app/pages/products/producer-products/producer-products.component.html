@@ -1,6 +1,6 @@
 <div div fxLayout="row" fxLayoutAlign="center center">
   <div class="title">
-    <h1 *ngIf="productsList.length">Lista de produse {{productId.toLowerCase()}}</h1>
+    <h1 *ngIf="productsList.length">Lista de produse</h1>
     <h1 *ngIf="!productsList.length"> Nu exista produse in aceasta categorie </h1>
   </div>
 </div>
@@ -8,7 +8,7 @@
 <div class="card-data" *ngIf="productsList.length">
   <mat-card class="card" *ngFor="let card of productsList">
     <mat-card-title>
-        <h2 class="products">{{card.name}}</h2>
+      <h2 class="products">{{card.name}}</h2>
     </mat-card-title>
     <mat-card-content>
       <div fxLayout="column" fxLayoutAlign="space-around start">

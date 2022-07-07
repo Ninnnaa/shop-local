@@ -26,8 +26,21 @@ export class EventService {
     return this.httpClient.get<EventInterface>(environment.url+ EventService.apiUrl.event(id));
   }
 
-  createEventBy(data: EventService): Observable<EventInterface> {
-    return this.httpClient.post<EventInterface>(environment.url+ EventService.apiUrl.events, data);
+  createEventBy(data: any, image?: File): Observable<EventInterface> {
+
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("date", data.date);
+    formData.append("time", data.time);
+    formData.append("name", data.name);
+    formData.append("participants", data.participants);
+    formData.append("description", data.description);
+    formData.append("location", data.location);
+    if(image) {
+      formData.append("event_image", image);
+    }
+    console.log(formData)
+    return this.httpClient.post<EventInterface>(environment.url+ EventService.apiUrl.events, formData);
   }
 
   deleteEvent(id: number): Observable<EventInterface> {

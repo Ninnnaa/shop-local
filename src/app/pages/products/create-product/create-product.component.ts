@@ -78,12 +78,14 @@ export class CreateProductComponent implements OnInit {
 
   submit(): void {
     if(this.productId == 0) {
-      console.log(this.productId)
-      this.productService.createProduct(this.form.value).subscribe(()=>{
+      const data = {
+        ...this.form.value,
+        user_id: 2
+      }
+      this.productService.createProduct(data).subscribe(()=>{
         this.router.navigateByUrl('/functions');
     })
     } else {
-      console.log(this.productId)
       this.editProduct(this.productId);
     }
   }

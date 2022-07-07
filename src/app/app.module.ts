@@ -39,6 +39,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ProductsComponent } from './pages/products/products.component';
 import { CreateProductComponent } from './pages/products/create-product/create-product.component';
+import { ProducerProductsComponent } from './pages/products/producer-products/producer-products.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { CreateProductComponent } from './pages/products/create-product/create-p
     CreateEventComponent,
     ProductsComponent,
     CreateProductComponent,
+    ProducerProductsComponent,
   ],
   imports: [
     BrowserModule,

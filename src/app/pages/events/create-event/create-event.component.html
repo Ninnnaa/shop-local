@@ -76,6 +76,11 @@
         >
         <mat-error>{{('forms.error.' + displayError('participants')) | translate}}</mat-error>
       </mat-form-field>
+      <input
+        type="file"
+        (change)="onfileSelected($event)"
+
+      >
     </div>
   </form>
   <button mat-raised-button (click)="submit()">{{'Adauga eveniment' | translate}}</button>

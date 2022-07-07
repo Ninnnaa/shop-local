@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthServiceService } from '../../../services/auth-service.service';
 import { UserInterface } from '../../../interfaces/auth.interface';
 
@@ -15,6 +15,7 @@ export class ProducerComponent implements OnInit {
   constructor(
     private readonly activatedRoute: ActivatedRoute,
     private readonly authService: AuthServiceService,
+    private readonly router: Router,
   ) {
     this.activatedRoute.params.subscribe(params => {
       this.userId = params['id'];
@@ -25,5 +26,9 @@ export class ProducerComponent implements OnInit {
     this.authService.getUser(this.userId).subscribe( user => {
       this.userData = user;
     })
+  }
+
+  getProducts() {
+    this.router.navigateByUrl(`/producer-products/${this.userId}`);
   }
 }

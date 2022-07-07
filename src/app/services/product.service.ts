@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ProductInterface } from '../interfaces/product.interface';
-import { EventInterface } from '../interfaces/event.interface';
+import { ProductInterface } from '../interfaces/product.interface';;
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -13,6 +12,7 @@ export class ProductService {
   static readonly apiUrl = {
     products: 'products',
     product: (id: number) => `products/${id}`,
+    producerProducts: (id: number) => `producer-products/${id}`,
   }
 
   constructor(
@@ -37,6 +37,10 @@ export class ProductService {
 
   getProductById(id: number): Observable<ProductInterface> {
     return this.httpClient.get<ProductInterface>(environment.url+ ProductService.apiUrl.product(id));
+  }
+
+  getProducerProducts(id: number): Observable<ProductInterface[]> {
+    return this.httpClient.get<ProductInterface[]>(environment.url+ ProductService.apiUrl.producerProducts(id));
   }
 
 }

@@ -14,6 +14,8 @@ import { AdministratorComponent } from './pages/administrator/administrator.comp
 import { ProducerPageComponent } from './pages/producer-page/producer-page.component';
 import { CreateEventComponent } from './pages/events/create-event/create-event.component';
 import { CreateProductComponent } from './pages/products/create-product/create-product.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProducerProductsComponent } from './pages/products/producer-products/producer-products.component';
 
 const routes: Routes = [
   {
@@ -55,6 +57,14 @@ const routes: Routes = [
       {
         path: 'newProduct/:id',
         component: CreateProductComponent,
+      },
+      {
+        path: 'products/:id',
+        component: ProductsComponent,
+      },
+      {
+        path: 'producer-products/:id',
+        component: ProducerProductsComponent,
       },
     ]
   },

@@ -6,4 +6,5 @@ export interface EventInterface {
   location: string;
   description: string;
   participants: string;
+  event_image: string;
 }
